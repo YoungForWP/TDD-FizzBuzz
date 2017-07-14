@@ -29,8 +29,8 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void test_when_number_is_15() throws Exception {
-        assertEquals("FizzBuzz", fizzBuzz.count(15));
+    public void test_when_number_is_60() throws Exception {
+        assertEquals("FizzBuzz", fizzBuzz.count(60));
     }
 
     @Test
@@ -46,15 +46,27 @@ public class FizzBuzzTest {
 
     @Test
     public void test_output_should_be_BuzzWhizz() throws Exception {
-        assertEquals("BuzzWhizz", fizzBuzz.count(35));
-        assertEquals("BuzzWhizz", fizzBuzz.count(70));
         assertEquals("BuzzWhizz", fizzBuzz.count(140));
     }
 
     @Test
     public void test_output_for_FizzBuzzWhizz_numbers() throws Exception {
-        assertEquals("FizzBuzzWhizz", fizzBuzz.count(105));
         assertEquals("FizzBuzzWhizz", fizzBuzz.count(210));
     }
+
+    @Test
+    public void test_output_for_numbers_which_first_match_Fizz_number() throws Exception {
+        assertEquals("Fizz", fizzBuzz.count(31));
+        assertEquals("Fizz", fizzBuzz.count(35));
+        assertEquals("Fizz", fizzBuzz.count(1357));
+    }
+
+    @Test
+    public void test_output_for_numbers_which_first_match_Buzz_number() throws Exception {
+        assertEquals("Buzz", fizzBuzz.count(51));
+        assertEquals("Buzz", fizzBuzz.count(53));
+        assertEquals("Buzz", fizzBuzz.count(105));
+    }
+
 
 }
