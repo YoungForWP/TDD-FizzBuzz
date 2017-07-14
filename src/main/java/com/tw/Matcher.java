@@ -10,6 +10,6 @@ public interface Matcher extends Comparable {
     @Override
     default int compareTo(Object o) {
         Matcher other = (Matcher) o;
-        return Integer.compare(other.priority(), priority());
+        return Integer.compare(priority(), other.priority());
     }
 }

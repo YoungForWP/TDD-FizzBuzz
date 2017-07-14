@@ -1,21 +1,21 @@
 package com.tw;
 
-public class FizzMatcher implements Matcher {
-    public FizzMatcher() {
+public class WhizzMatcher implements Matcher {
+    public WhizzMatcher() {
     }
 
     @Override
     public boolean isMatched(int number) {
-        return number % 3 == 0;
+        return (number % 7) == 0;
     }
 
     @Override
     public String getText() {
-        return "Fizz";
+        return "Whizz";
     }
 
     @Override
     public int priority() {
-        return 0;
+        return 3;
     }
 }

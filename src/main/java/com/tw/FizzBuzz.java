@@ -8,7 +8,8 @@ import static java.util.Collections.sort;
 public class FizzBuzz {
     private final BuzzMatcher buzzMatcher = new BuzzMatcher();
     private final FizzMatcher fizzMatcher = new FizzMatcher();
-    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher);
+    private final WhizzMatcher whizzMatcher = new WhizzMatcher();
+    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher, whizzMatcher);
 
     public FizzBuzz() {
         //noinspection unchecked

@@ -14,6 +14,6 @@ public class BuzzMatcher implements Matcher {
 
     @Override
     public int priority() {
-        return 0;
+        return 1;
     }
 }
