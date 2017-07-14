@@ -6,10 +6,7 @@ import java.util.List;
 import static java.util.Collections.sort;
 
 public class FizzBuzz {
-    private final BuzzMatcher buzzMatcher = new BuzzMatcher();
-    private final FizzMatcher fizzMatcher = new FizzMatcher();
-    private final WhizzMatcher whizzMatcher = new WhizzMatcher();
-    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher, whizzMatcher);
+    private List<Matcher> matchers = Arrays.asList(Matcher.buzz(), Matcher.fizz(), Matcher.whizz());
 
     public FizzBuzz() {
         //noinspection unchecked
@@ -17,13 +14,13 @@ public class FizzBuzz {
     }
 
     public String count(int number) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (Matcher matcher : matchers) {
             if (matcher.isMatched(number)) {
-                result += matcher.getText();
+                result.append(matcher.getText());
             }
         }
-        return result.isEmpty() ? String.valueOf(number) : result;
+        return (result.length() == 0) ? String.valueOf(number) : result.toString();
     }
 
 }
